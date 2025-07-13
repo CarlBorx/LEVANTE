@@ -6,8 +6,8 @@ import re
 @st.cache_data
 def load_data():
     df = pd.read_excel("CARTELLONI_BOLOGNA.xlsx", skiprows=3)
-    df = df[["Toponimo", "DAL AL", "Pari_Dispari", "CD Padre"]].rename(columns={
-        "Toponimo": "Via",
+    df = df[["Denominazione", "DAL AL", "Pari_Dispari", "CD Padre"]].rename(columns={
+        "Denominazione": "Via",
         "DAL AL": "Intervallo",
         "Pari_Dispari": "Parita",
         "CD Padre": "Zona"
